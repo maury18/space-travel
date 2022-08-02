@@ -20,18 +20,18 @@ const rocketList = (objetc) => {
   return rocketData;
 };
 
-  const getRockets = createAsyncThunk(
-    'rockets/getRockets',
-    async () => {
-      const response = await fetch(apiUrl, {
-        method: 'GET',
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      });
-      const data = await response.json();
-      return rocketList(data);
-    },
-  );
+const getRockets = createAsyncThunk(
+  'rockets/getRockets',
+  async () => {
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    const data = await response.json();
+    return rocketList(data);
+  },
+);
 
 export default getRockets;

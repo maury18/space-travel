@@ -13,24 +13,24 @@ const createTable = (data) => {
         name: data[mission].mission_name,
         description: data[mission].description,
         joined: false,
-      }
-    )
+      },
+    );
   });
   return missions;
 };
 
-  const getMissions = createAsyncThunk(
-    'missions/getMissions',
-    async () => {
-      const response = await fetch(apiUrl, {
-        method: 'GET',
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      });
-      const data = await response.json();
-      return createTable(data);
-    },
-  );
+const getMissions = createAsyncThunk(
+  'missions/getMissions',
+  async () => {
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    const data = await response.json();
+    return createTable(data);
+  },
+);
 
 export default getMissions;
