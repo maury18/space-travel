@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types'
 import { useDispatch } from 'react-redux';
 import { updateRocket } from '../redux/rockets';
 
@@ -23,6 +24,15 @@ const Rockets = (props) => {
       </div>
     </li>
   );
+};
+
+Rockets.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  image: PropTypes.string.isRequired,
+
 };
 
 export default Rockets;

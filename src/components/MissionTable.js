@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { setStatus } from '../redux/missions';
 
@@ -28,6 +29,13 @@ const MissionTable = (props) => {
       </tbody>
     </>
   );
+};
+
+MissionTable.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  joined: PropTypes.bool.isRequired,
 };
 
 export default MissionTable;
