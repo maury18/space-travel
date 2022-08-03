@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import { useSelector } from 'react-redux/es/exports';
-import MissionTable from './components/MissionTable';
+import MissionTable from '../components/MissionTable';
 
 const Missions = () => {
   const { missions } = useSelector((state) => state.missions);

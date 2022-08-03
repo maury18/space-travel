@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import getMissions from './apiRockets';
+import getMissions from './apiMissions';
 
 const initialState = {
   missions: [],
@@ -29,13 +29,11 @@ const reducer = createSlice({
       ...state,
       status: 'loading',
     }),
-
     [getMissions.fulfilled]: (state, action) => ({
       ...state,
       missions: action.payload,
       status: 'success',
     }),
-
     [getMissions.rejected]: (state) => ({
       ...state,
       loading: 'something went wrong',
@@ -44,5 +42,4 @@ const reducer = createSlice({
 });
 
 export const { setStatus } = reducer.actions;
-
 export default reducer;
