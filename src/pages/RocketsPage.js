@@ -1,6 +1,6 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import Rockets from "../components/Rockets";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Rockets from '../components/Rockets';
 
 const RocketsPage = () => {
   const { rockets } = useSelector((state) => state.rockets);
@@ -9,7 +9,7 @@ const RocketsPage = () => {
   return (
     <ul className="rocketlist">
       {
-        rocketList ? rocketList.map((rocket) =>(
+        rocketList ? rocketList.map((rocket) => (
           <Rockets
             name={rockets[rocket].name}
             description={rockets[rocket].description}

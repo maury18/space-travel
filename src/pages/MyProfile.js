@@ -1,5 +1,5 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const MyProfile = () => {
   const { rockets } = useSelector((state) => state.rockets);
@@ -7,7 +7,7 @@ const MyProfile = () => {
   const rocketList = Object.values(rockets);
   const missionList = Object.values(missions);
   const reservedRockets = rocketList.filter((rockets) => rockets.reserved);
-  const joinedMissions = missionList.filter((mission) => mission.joined)
+  const joinedMissions = missionList.filter((mission) => mission.joined);
 
   return (
     <div className="mycontainer">
