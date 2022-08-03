@@ -1,4 +1,4 @@
-import { PropTypes } from 'prop-types'
+import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { updateRocket } from '../redux/rockets';
 
@@ -6,7 +6,7 @@ const Rockets = (props) => {
   const dispatch = useDispatch();
 
   const {
-    name, description, image, id, reserved
+    name, description, image, id, reserved,
   } = props;
 
   return (
@@ -20,7 +20,7 @@ const Rockets = (props) => {
           {description}
         </p>
         {reserved ? <button className="rocket-info__cancelbutton" type="button" onClick={() => dispatch(updateRocket(id))}>Cancel reservation</button>
-        : <button className="rocket-info__reservebutton" type="button" onClick={() => dispatch(updateRocket(id))}>Reserve rocket</button>}
+          : <button className="rocket-info__reservebutton" type="button" onClick={() => dispatch(updateRocket(id))}>Reserve rocket</button>}
       </div>
     </li>
   );
