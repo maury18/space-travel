@@ -55,7 +55,9 @@ Please run: npm run build and then npm start to see project displayed in your br
 
 To see the project deployed please visit anyone of the following links:
 
-not available
+https://joyful-kitsune-4f643f.netlify.app
+
+https://maury-dario-space-travel.herokuapp.com/
 
 ##  Authors
 👤 Author1
