@@ -170,7 +170,7 @@ tbody:nth-child(odd) {
   height: auto;
 }
 
-.mission-not-member{
+.mission-not-member {
   width: 15%;
   text-align: center;
   margin: 0;
@@ -251,4 +251,3 @@ tbody:nth-child(odd) {
 .element-name:last-of-type {
   border: none;
 }
-
